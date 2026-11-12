@@ -3,6 +3,7 @@ Version: 1.0.0
 Date: 2026-11-12
   Changes:
     - This fork retains the original clock display for Factorio 2.1.24.
+    - Fixed the clock on custom surfaces and surfaces whose names differ from their associated planet.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2024-11-24

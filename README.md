@@ -2,7 +2,7 @@
 
 Shows the local time of day on the surface your character is visiting.
 
-This fork retains the original clock display for Factorio 2.1.24.
+This fork retains the original clock display for Factorio 2.1.24. Planet icons follow the surface's associated planet; custom surfaces use a fallback icon while keeping their clock and time zone. Space platforms retain the space display.
 
 Requires Factorio 2.1.24 or later. Disable `WhatTimeIsIt` before enabling this fork. Required content and optional integrations are listed in the mod dependencies.
 
@@ -12,4 +12,4 @@ Original work by CaptainDapper. Maintained by FactorioMods.
 
 ## Technical validation
 
-Headless Factorio 2.1.24 world creation and a 600-tick native simulation passed in the compatibility test mod group.
+Headless Factorio 2.1.24 world creation and a 600-tick native simulation passed in the compatibility test mod group. A native virtual-player fixture verifies clock labels and icon selection on custom surfaces, renamed planet surfaces and space platforms.

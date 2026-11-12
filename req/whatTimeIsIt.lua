@@ -13,18 +13,23 @@ end
 
 local function _UpdateSurface(player, elem)
 	log(player.surface.name)
+	local surface = player.surface
+	local sprite = "item/steel-plate"
 
-	if (player.surface.platform == nil) then
+	if (surface.platform == nil) then
 		elem.clockLabel.visible = true
 
 		elem.timeZone.caption = player.surface.name:sub(1,1):upper() .. "ST"
-		elem.planetIcon.sprite = "space-location/" .. player.surface.name
+		if surface.planet then
+			sprite = "space-location/" .. surface.planet.name
+		end
 	else
 		elem.clockLabel.visible = false
 
 		elem.timeZone.caption = "SPACE!"
-		elem.planetIcon.sprite = "entity/cargo-pod-container"
+		sprite = "entity/cargo-pod-container"
 	end
+	elem.planetIcon.sprite = helpers.is_valid_sprite_path(sprite) and sprite or "item/steel-plate"
 end
 
 local function MakeUIIfNotExists(player)
