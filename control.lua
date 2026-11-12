@@ -1,3 +1,4 @@
+local legacy_import = require("legacy_import")
 local WhatTime = require('req/whatTimeIsIt')
 
 local function On_Tick(event)
@@ -13,3 +14,5 @@ script.on_event(defines.events.on_tick, On_Tick)
 script.on_event(defines.events.on_player_changed_surface, On_SurfaceUpdate)
 
 script.on_configuration_changed(On_Destroy)
+
+script.on_init(function() legacy_import.adopt("WhatTimeIsIt") end)
